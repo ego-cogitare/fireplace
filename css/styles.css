@@ -677,6 +677,24 @@ SECTION .reviews .reviews-partners {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, .8);
+  text-align: center;
+  z-index: 1;
+}
+
+SECTION .reviews .reviews-partners .our-partners {
+  display: table;
+  height: 100px;
+  margin: 10px auto 0;
+}
+
+SECTION .reviews .reviews-partners .our-partners .partner {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 85px;
+}
+
+SECTION .reviews .reviews-partners .our-partners .partner:last-child {
+  padding-right: 0;
 }
 
 SECTION .reviews .reviews-partners .reviews-title {
