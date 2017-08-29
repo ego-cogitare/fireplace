@@ -114,6 +114,20 @@ body {
   background-size: contain;
 }
 
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: none;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background: #db534c;
+  border: none;
+}
+
 .swiper-button-prev {
   background-image: url('../img/slider-arrow-left.png');
   left: 288px;
@@ -343,7 +357,8 @@ SECTION .shops-map .map-squares SPAN:first-child {
 }
 
 SECTION .shops-map .map-squares .text-large,
-SECTION .get-catalog .catalog-squares .text-large {
+SECTION .get-catalog .catalog-squares .text-large,
+SECTION .reviews .reviews-square .text-large {
   font-size: 40px;
   font-weight: bold;
   padding: 5px 0 20px;
@@ -668,4 +683,74 @@ SECTION .reviews .reviews-partners .reviews-title {
   text-transform: uppercase;
   font-size: 30px;
   margin-top: 46px;
+}
+
+SECTION .reviews .reviews-square {
+  position: absolute;
+  background: url('../img/rewiews-square.png') no-repeat center center;
+  background-size: cover;
+  width: 674px;
+  height: 672px;
+  top: 60px;
+  right: 56%;
+}
+
+SECTION .reviews .reviews-square > SPAN {
+  display: block;
+  text-transform: uppercase;
+  font-size: 30px;
+  width: 570px;
+  margin-left: 185px;
+}
+
+SECTION .reviews .reviews-square > SPAN:first-child {
+  margin-top: 278px;
+}
+
+SECTION .reviews .rewiews-slider {
+  position: absolute;
+  top: 334px;
+  left: 39.5%;
+  width: 780px;
+  height: 295px;
+}
+
+SECTION .reviews .reviews-square .reviews-pagination {
+  margin-left: 185px;
+  margin-top: 6px;
+}
+
+SECTION .reviews .slide-contents {
+  padding: 40px;
+  border: 2px solid #db534c;
+  width: calc(100% - 175px);
+}
+
+SECTION .reviews .slide-contents .comment {
+  width: 520px;
+  height: 155px;
+  overflow: auto;
+  line-height: 22px;
+}
+
+SECTION .reviews .slide-contents .author-name {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+SECTION .reviews .slide-contents .author-company {
+  font-style: italic;
+  margin-top: 4px;
+}
+
+SECTION .reviews .slide-contents .author-photo {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 30px;
+  right: 10px;
 }

@@ -1,10 +1,21 @@
 $(document).ready(function() {
-  var slider = new Swiper('.swiper-container', {
+  new Swiper('.slider-section .swiper-container', {
     direction: 'horizontal',
     slidesPerView: 1,
-    // pagination: '.swiper-pagination',
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    // autoplay: 4000,
+    loop: true,
+    spaceBetween: 0,
+    mousewheelControl: false,
+    speed: 1000
+  });
+
+  new Swiper('.rewiews-slider .swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    pagination: '.reviews-pagination',
     paginationClickable: true,
     // autoplay: 4000,
     loop: true,
