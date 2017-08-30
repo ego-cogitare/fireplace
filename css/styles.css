@@ -106,6 +106,21 @@ body {
   background: #ffffff;
   border: 1px solid #db534c;
   box-sizing: border-box;
+  outline: none;
+  color: #191919;
+}
+
+.input:focus {
+  border-color: #191919;
+}
+
+.error-color {
+  color: #df0024;
+}
+
+.error {
+  color: #df0024;
+  border-color: #df0024;
 }
 
 .swiper-button-prev,
@@ -818,7 +833,8 @@ SECTION .ask-question .hand {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(18%);;
+  transform: translateX(18%);
+  pointer-events: none;
 }
 
 SECTION .ask-question .ask-question-request SPAN {
@@ -916,4 +932,60 @@ FOOTER .footer-contacts .socials .social.twitter {
 
 FOOTER .footer-contacts .socials .social.youtube {
   background-image: url('../img/icons/social/youtube.png');
+}
+
+.popup-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-wrapper .buy-now {
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border: 4px solid #db534c;
+  padding: 26px;
+  background-color: #ffffff;
+  color: #191919;
+  width: 710px;
+}
+
+.popup-wrapper .buy-now .title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 36px;
+}
+
+.popup-wrapper .buy-now .descr {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.popup-wrapper .buy-now .popup-form {
+  margin-top: 75px;
+}
+
+.popup-wrapper .buy-now .popup-form .row {
+  width: 47.5%;
+}
+
+.popup-wrapper .buy-now .popup-form .row:last-child  {
+  width: 100%;
+}
+
+.popup-wrapper .buy-now .popup-form .row:last-child .btn {
+  margin-top: 32px;
 }
