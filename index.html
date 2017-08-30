@@ -11,6 +11,7 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/main.js" defer></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAQd8ifFv5_cNqRZ0oFtizulSNbruyuFas&callback=initMap" async defer></script>
   </head>
   <body>
     <header>
@@ -101,10 +102,10 @@
     <section>
       <div class="slider-section">
         <div class="swiper-container h100p">
+          <span class="title text-center">Наши клиенты покупают камины с 1993 года!</span>
           <ul class="swiper-wrapper text-center">
             <li class="swiper-slide">
               <div class="slide-contents clear">
-                <span class="title text-center">Наши клиенты покупают камины с 1993 года!</span>
                 <div class="product-preview clear left">
                   <div class="product-thumbs left">
                     <div class="product-thumb active">
@@ -312,7 +313,46 @@
       </div>
     </section>
 
+    <section>
+      <div class="ask-question">
+        <div class="text-red ask-question-title">остались вопросы?</div>
+        <div class="ask-question-request">
+          <span>Оставьте заявку и наш менеджер свяжется с Вами в течении 15 минут!</span>
+          <button class="btn">Оставить заявку</button>
+        </div>
+        <div class="hand"></div>
+      </div>
+    </section>
+
     <footer>
+      <div class="footer-wrapper">
+        <div id="map" class="footer-map"></div>
+        <div class="footer-contacts">
+          <div class="copyright">KrimART © 2011</div>
+          <div class="address">Украина, г.Одесса<br/>ул. Пантелеймоновская, 1б</div>
+          <div class="telephone">
+            <a href="tel:+380635023645">(063) 502-36-45</a>
+          </div>
+          <div class="btn">связаться с нами</div>
+          <div class="socials">
+            <div class="title">Мы в социальных сетях:</div>
+            <ul>
+              <li class="social instagram">
+                <a href="#" target="_blank"></a>
+              </li>
+              <li class="social twitter">
+                <a href="#" target="_blank"></a>
+              </li>
+              <li class="social youtube">
+                <a href="#" target="_blank"></a>
+              </li>
+              <li class="social facebook">
+                <a href="#" target="_blank"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

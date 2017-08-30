@@ -30,3 +30,16 @@ $(document).ready(function() {
     $(this).addClass('active').siblings('.product-thumb').removeClass('active');
   });
 });
+
+function initMap() {
+  var coords = {lat: 46.469020, lng: 30.752267};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: coords,
+  });
+  var marker = new google.maps.Marker({
+    position: coords,
+    map: map
+  });
+  map.panBy($(document).width() / -4, 0);
+}

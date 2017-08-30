@@ -97,6 +97,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   border: none;
+  box-sizing: border-box;
 }
 
 .input {
@@ -130,12 +131,12 @@ body {
 
 .swiper-button-prev {
   background-image: url('../img/slider-arrow-left.png');
-  left: 288px;
+  left: 12%;
 }
 
 .swiper-button-next {
   background-image: url('../img/slider-arrow-right.png');
-  right: 288px;
+  right: 12%;
 }
 
 HEADER {
@@ -458,12 +459,13 @@ SECTION .slider-section .slide-contents {
   display: inline-block;
 }
 
-SECTION .slider-section .slide-contents .title {
+SECTION .slider-section .title {
   margin-top: 100px;
   margin-bottom: 88px;
   display: block;
   text-transform: uppercase;
   font-size: 30px;
+  color: #4a4a4a;
 }
 
 SECTION .slider-section .slide-contents .product-preview .product-thumb {
@@ -618,18 +620,20 @@ SECTION .request-callback .diamond-wrapper {
   position: relative;
 }
 
-SECTION .request-callback .diamond-wrapper:first-child {
-  margin-left: 105px;
+SECTION .request-callback .diamond-wrapper:nth-child(4) {
+  margin-right: 0;
 }
 
 SECTION .request-callback .diamond-descr {
-  transform: rotateZ(-45deg) translate(57px, 100px);
+  transform: rotateZ(-45deg) translate(0px, 170px);
+  transform-origin: 0 0;
   color: #191919;
   width: 250px;
   height: 100px;
   position: absolute;
   font-size: 18px;
   line-height: 22px;
+  overflow: hidden;
 }
 
 SECTION .request-callback .diamond-wrapper:last-child {
@@ -771,4 +775,145 @@ SECTION .reviews .slide-contents .author-photo {
   background-size: cover;
   top: 30px;
   right: 10px;
+}
+
+SECTION .ask-question {
+  position: relative;
+  background: url('../img/ask-question-bg.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 330px;
+}
+
+SECTION .ask-question .ask-question-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 40px;
+}
+
+SECTION .ask-question .ask-question-request {
+  width: 669px;
+  height: 126px;
+  background: url('../img/ask-question-btn.png') no-repeat center bottom;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-size: contain;
+}
+
+SECTION .ask-question .btn {
+  width: 371px;
+  margin-left: 50%;
+  margin-top: 18px;
+  transform: translateX(-50%);
+}
+
+SECTION .ask-question .hand {
+  width: 348px;
+  height: 159px;
+  background: url('../img/hand.png') no-repeat center bottom;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(18%);;
+}
+
+SECTION .ask-question .ask-question-request SPAN {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translate(-50%, -6px);
+  white-space: nowrap;
+}
+
+FOOTER .footer-wrapper {
+  width: 100%;
+  height: 490px;
+  position: relative;
+}
+
+FOOTER .footer-wrapper .footer-map {
+  width: 100%;
+  height: 100%;
+}
+
+FOOTER .footer-wrapper .footer-contacts {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+FOOTER .footer-contacts {
+  padding-top: 76px;
+  padding-left: 378px;
+  box-sizing: border-box;
+}
+
+FOOTER .footer-contacts .copyright {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+FOOTER .footer-contacts .address {
+  margin-top: 44px;
+  font-size: 14px;
+}
+
+FOOTER .footer-contacts .telephone A {
+  display: block;
+  margin-top: 44px;
+  font-size: 36px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+FOOTER .footer-contacts .btn {
+  margin-top: 15px;
+  width: 272px;
+}
+
+FOOTER .footer-contacts .socials {
+  margin-top: 64px;
+}
+
+FOOTER .footer-contacts .socials .title {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+FOOTER .footer-contacts .socials .social {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+}
+
+FOOTER .footer-contacts .socials .social A {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+FOOTER .footer-contacts .socials .social.instagram {
+  background-image: url('../img/icons/social/instagram.png');
+}
+
+FOOTER .footer-contacts .socials .social.facebook {
+  background-image: url('../img/icons/social/facebook.png');
+}
+
+FOOTER .footer-contacts .socials .social.twitter {
+  background-image: url('../img/icons/social/twitter.png');
+}
+
+FOOTER .footer-contacts .socials .social.youtube {
+  background-image: url('../img/icons/social/youtube.png');
 }
