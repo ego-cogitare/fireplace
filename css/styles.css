@@ -1035,3 +1035,305 @@ SECTION.popup-wrapper .popup .popup-contents .popup-close:hover {
   transform: rotate(360deg);
   transition: all 0.5s ease-in-out 0s;
 }
+
+@media only screen and (min-width: 1440px) and (max-width: 1679px) {
+  .swiper-button-prev {
+    left: 5%;
+  }
+  .swiper-button-next {
+    right: 5%;
+  }
+  SECTION .header-cover {
+    height: 855px;
+  }
+  SECTION .header-cover .large-rect {
+    width: 500px;
+    top: 50px;
+  }
+  SECTION .header-cover .large-rect SPAN:first-child {
+    padding-top: 44%;
+  }
+  SECTION .header-cover .small-rect {
+    width: 250px;
+    height: 250px;
+  }
+  SECTION .header-cover .rects-wrapper {
+    top: 475px;
+  }
+  SECTION .header-cover .small-rect SPAN:first-child {
+    padding-top: 78px;
+  }
+  SECTION .request-callback .diamond-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+  SECTION .reviews .reviews-square {
+    width: 600px;
+    height: 600px;
+  }
+  SECTION .reviews .reviews-square > SPAN:first-child {
+    margin-top: 244px;
+  }
+  SECTION .reviews .reviews-square > SPAN {
+    margin-left: 150px;
+  }
+  SECTION .reviews .reviews-square .reviews-pagination {
+    margin-left: 150px;
+  }
+  SECTION .reviews .rewiews-slider {
+    top: 305px;
+  }
+  SECTION .request-callback .diamond-descr {
+    width: 220px;
+    font-size: 16px;
+  }
+  SECTION .get-catalog .catalog-squares {
+    width: 600px;
+    height: 522px;
+  }
+  SECTION .get-catalog .catalog-squares SPAN {
+    font-size: 26px;
+    margin-left: 160px;
+  }
+  SECTION .shops-map .map-squares .text-large,
+  SECTION .get-catalog .catalog-squares .text-large,
+  SECTION .reviews .reviews-square .text-large {
+    font-size: 34px;
+  }
+  SECTION .get-catalog .catalog-squares SPAN:first-child {
+    margin-top: 160px;
+  }
+  SECTION .get-catalog .catalog-form {
+    top: 168px;
+  }
+  SECTION .shops-map .map-squares SPAN {
+    font-size: 26px;
+  }
+  SECTION .shops-map .map-squares {
+    width: 600px;
+    height: 474px;
+  }
+  SECTION .shops-map .map-ukraine {
+    width: 690px;
+    height: 476px;
+    top: 112px;
+  }
+  FOOTER .footer-contacts {
+    padding-left: 208px;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  .swiper-button-prev {
+    left: 4%;
+  }
+  .swiper-button-next {
+    right: 4%;
+  }
+  .btn {
+    padding: 15px 20px;
+  }
+  .input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  SECTION .header-cover {
+    height: 755px;
+  }
+  SECTION .header-cover .large-rect {
+    width: 450px;
+    height: 450px;
+    top: 60px;
+  }
+  SECTION .header-cover .large-rect SPAN:first-child {
+    padding-top: 44%;
+  }
+  SECTION .header-cover .large-rect SPAN:first-child {
+    padding-top: 37%;
+  }
+  SECTION .header-cover .large-rect SPAN.text-large {
+    font-size: 44px;
+  }
+  SECTION .header-cover .small-rect {
+    width: 230px;
+    height: 230px;
+  }
+  SECTION .header-cover .rects-wrapper {
+    top: 414px;
+  }
+  SECTION .header-cover .small-rect SPAN {
+    font-size: 18px;
+  }
+  SECTION .header-cover .small-rect .text-small {
+    font-size: 14px;
+  }
+  SECTION .header-cover .small-rect .text-large {
+    font-size: 36px;
+  }
+  SECTION .header-cover .small-rect .text-x-large {
+    font-size: 60px;
+  }
+  SECTION .header-cover .small-rect SPAN:first-child {
+    padding-top: 76px;
+  }
+  SECTION .slider-section {
+    height: 585px;
+  }
+  SECTION .shops-map .map-squares {
+    width: 474px;
+    height: 374px;
+  }
+  SECTION .shops-map .map-squares SPAN {
+    margin-left: 100px;
+    font-size: 26px;
+  }
+  SECTION .shops-map .map-squares SPAN:first-child {
+    margin-top: 40px;
+  }
+  SECTION .shops-map .map-squares .text-large,
+  SECTION .get-catalog .catalog-squares .text-large,
+  SECTION .reviews .reviews-square .text-large {
+    font-size: 30px;
+    padding: 5px 0 10px;
+  }
+  SECTION .shops-map .map-squares .text-small,
+  SECTION .get-catalog .catalog-squares .text-small {
+    font-size: 12px;
+    width: 302px;
+    line-height: 14px;
+  }
+  SECTION .shops-map .map-ukraine {
+    width: 600px;
+    height: 419px;
+    left: 47%;
+    top: 44px;
+  }
+  SECTION .shops-map .shops .shop {
+    width: 270px;
+    height: 83px;
+    margin-top: 30px;
+  }
+  SECTION .shops-map .shops {
+    height: 196px;
+  }
+  SECTION .shops-map {
+    height: 750px;
+  }
+  SECTION .slider-section .title {
+    margin-top: 70px;
+    margin-bottom: 58px;
+  }
+  SECTION .slider-section .slide-contents .product-preview .product-thumb {
+    width: 100px;
+    height: 100px;
+  }
+  SECTION .slider-section .slide-contents .product-preview .product-photo {
+    width: 324px;
+    height: 324px;
+  }
+  SECTION .slider-section .slide-contents .product-descr {
+    margin-left: 40px;
+  }
+  SECTION .slider-section .slide-contents .product-descr H2 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+  SECTION .slider-section .slide-contents .product-descr P {
+    line-height: 16px;
+    height: 84px;
+  }
+  SECTION .slider-section .slide-contents .product-descr .product-about {
+    height: 130px;
+  }
+  SECTION .slider-section .slide-contents .product-descr .product-size {
+    padding: 8px 14px;
+  }
+  SECTION .get-catalog {
+    height: 545px;
+  }
+  SECTION .request-callback .callback-title {
+    text-transform: uppercase;
+    padding: 70px 0 10px 0;
+  }
+  SECTION .get-catalog .catalog-squares {
+    width: 570px;
+    height: 499px;
+    right: 54%;
+  }
+  SECTION .get-catalog .catalog-squares SPAN {
+    font-size: 24px;
+    margin-left: 140px;
+  }
+  SECTION .shops-map .map-squares .text-large,
+  SECTION .get-catalog .catalog-squares .text-large,
+  SECTION .reviews .reviews-square .text-large {
+    font-size: 31px;
+    width: 500px;
+  }
+  SECTION .request-callback .callback-diamonds {
+    margin-top: 100px;
+  }
+  SECTION .get-catalog .catalog-squares SPAN:first-child {
+    margin-top: 150px;
+  }
+  SECTION .get-catalog .catalog-form {
+    top: 168px;
+  }
+  SECTION .request-callback .diamond-wrapper {
+    width: 130px;
+    height: 130px;
+  }
+  SECTION .request-callback .diamond-descr {
+    width: 195px;
+    font-size: 14px;
+  }
+  SECTION .request-callback .diamond-descr {
+    transform: rotateZ(-45deg) translate(0px, 150px);
+  }
+  SECTION .request-callback {
+    height: 760px;
+  }
+  SECTION .reviews {
+    height: 675px;
+  }
+  SECTION .reviews .reviews-square {
+    width: 550px;
+    height: 550px;
+  }
+  SECTION .reviews .reviews-square > SPAN:first-child {
+    margin-top: 222px;
+  }
+  SECTION .reviews .reviews-square > SPAN {
+    margin-left: 150px;
+  }
+  SECTION .reviews .reviews-square .reviews-pagination {
+    margin-left: 150px;
+  }
+  SECTION .reviews .rewiews-slider {
+    top: 285px;
+    width: 680px;
+  }
+  SECTION .reviews .slide-contents {
+    padding: 30px;
+  }
+  SECTION .reviews .slide-contents .comment {
+    width: 460px;
+    height: 150px;
+    line-height: 20px;
+    font-size: 16px;
+  }
+  SECTION .reviews .slide-contents .author-photo {
+    width: 150px;
+    height: 150px;
+    right: 38px;
+  }
+  FOOTER .footer-contacts {
+    padding-left: 180px;
+  }
+}
+
+/*@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}*/
