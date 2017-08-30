@@ -829,7 +829,7 @@ HEADER {
 .ask-question .btn {
   width: 371px;
   margin-left: 50%;
-  margin-top: 18px;
+  margin-top: 30px;
   transform: translateX(-50%);
 }
 
@@ -842,6 +842,7 @@ HEADER {
   left: 50%;
   transform: translateX(18%);
   pointer-events: none;
+  background-size: contain;
 }
 
 .ask-question .ask-question-request SPAN {
@@ -1145,6 +1146,13 @@ HEADER {
   }
   .footer-contacts .btn {
     width: 258px;
+  }
+  .ask-question .btn {
+    margin-top: 32px;
+  }
+  .ask-question .hand {
+    width: 340px;
+    height: 156px;
   }
   .input {
     font-size: 16px;
