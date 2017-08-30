@@ -29,6 +29,31 @@ $(document).ready(function() {
     $productImg.attr('src', $(this).find('IMG').attr('src'));
     $(this).addClass('active').siblings('.product-thumb').removeClass('active');
   });
+
+  $('.popup-open').on('click', function() {
+    var $popupWrapper = $('.popup-1');
+    $popupWrapper.show(0, function() {
+      $(this).removeClass('invisible')
+    });
+  });
+
+  $('#get-catalog-form').on('submit', function(e) {
+    e.preventDefault();
+    
+    // Close popup
+    $(this).closest('.popup-contents').find('.popup-close').trigger('click');
+
+    var $popupWrapper = $('.popup-2');
+    $popupWrapper.show(0, function() {
+      $(this).removeClass('invisible')
+    });
+  });
+
+  $('.popup-close').on('click', function() {
+    var $popupWrapper = $(this).closest('.popup-wrapper');
+    $popupWrapper.addClass('invisible');
+    setTimeout(function() { $popupWrapper.hide(); }, 300);
+  });
 });
 
 function initMap() {

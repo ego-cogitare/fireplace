@@ -1,6 +1,7 @@
 body {
   font-family: 'Segoe UI', 'Arial', 'Tahoma';
   color: #ffffff;
+  margin-top: 74px;
 }
 
  .text-left {
@@ -158,6 +159,10 @@ HEADER {
   width: 100%;
   height: 74px;
   background-color: #191919;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 HEADER .wrapper {
@@ -934,18 +939,33 @@ FOOTER .footer-contacts .socials .social.youtube {
   background-image: url('../img/icons/social/youtube.png');
 }
 
-.popup-wrapper {
-  display: block;
+SECTION.popup-wrapper {
+  z-index: 2;
+  opacity: 1;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out 0s;
 }
 
-.popup-wrapper .buy-now {
+SECTION.popup-wrapper.invisible {
+  opacity: 0;
+}
+
+SECTION.popup-wrapper.popup-1 .popup {
+  background: url('../img/popup-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+SECTION.popup-wrapper.popup-2 .popup {
+  background: url('../img/popup-thanks-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+SECTION.popup-wrapper .popup {
   display: inline-block;
   position: fixed;
   left: 50%;
@@ -958,15 +978,15 @@ FOOTER .footer-contacts .socials .social.youtube {
   width: 710px;
 }
 
-.popup-wrapper .buy-now .title {
+SECTION.popup-wrapper .popup .title {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 40px;
-  margin-top: 36px;
+  padding-top: 36px;
 }
 
-.popup-wrapper .buy-now .descr {
+SECTION.popup-wrapper .popup .descr {
   font-size: 16px;
   text-transform: uppercase;
   text-align: center;
@@ -974,18 +994,44 @@ FOOTER .footer-contacts .socials .social.youtube {
   font-weight: 500;
 }
 
-.popup-wrapper .buy-now .popup-form {
+SECTION.popup-wrapper.popup-2 .popup .descr {
+  padding-bottom: 46px;
+}
+
+SECTION.popup-wrapper .popup .popup-form {
   margin-top: 75px;
 }
 
-.popup-wrapper .buy-now .popup-form .row {
+SECTION.popup-wrapper .popup .popup-form .row {
   width: 47.5%;
 }
 
-.popup-wrapper .buy-now .popup-form .row:last-child  {
+SECTION.popup-wrapper .popup .popup-form .row:last-child  {
   width: 100%;
 }
 
-.popup-wrapper .buy-now .popup-form .row:last-child .btn {
+SECTION.popup-wrapper .popup .popup-form .row:last-child .btn {
   margin-top: 32px;
+}
+
+SECTION.popup-wrapper .popup .popup-contents {
+  position: relative;
+}
+
+SECTION.popup-wrapper .popup .popup-contents .popup-close {
+  font-size: 32px;
+  position: absolute;
+  right: -17px;
+  top: -18px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 27px;
+  cursor: pointer;
+  user-select: none;
+}
+
+SECTION.popup-wrapper .popup .popup-contents .popup-close:hover {
+  transform: rotate(360deg);
+  transition: all 0.5s ease-in-out 0s;
 }
