@@ -39,7 +39,7 @@ $(document).ready(function() {
 
   $('#get-catalog-form').on('submit', function(e) {
     e.preventDefault();
-    
+
     // Close popup
     $(this).closest('.popup-contents').find('.popup-close').trigger('click');
 
@@ -57,7 +57,10 @@ $(document).ready(function() {
 });
 
 function initMap() {
-  var coords = {lat: 46.469020, lng: 30.752267};
+  var coords = {
+    lat: 46.469020,
+    lng: 30.752267
+  };
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
     center: coords,

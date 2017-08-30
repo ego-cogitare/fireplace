@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', 'Arial', 'Tahoma';
+  font-family: 'Arial', 'Tahoma';
   color: #ffffff;
   margin-top: 74px;
 }
@@ -545,7 +545,7 @@ HEADER {
   display: inline-block;
   border: 1px solid #d24a43;
   font-size: 14px;
-  padding: 10px 14px;
+  padding: 10px 13px;
   border-radius: 3px;
 }
 
@@ -614,6 +614,10 @@ HEADER {
   display: inline-block;
 }
 
+.request-callback .callback-diamonds .diamond-container {
+  display: inline-block;
+}
+
 .request-callback .callback-title {
   text-transform: uppercase;
   padding: 100px 0 10px 0;
@@ -634,26 +638,25 @@ HEADER {
   height: 170px;
   padding: 10px;
   transform: rotateZ(45deg);
-  border: 1px solid red;
-  display: inline-block;
+  border: 1px solid #db534c;
   margin-right: 108px;
   position: relative;
+  transform-origin: 50% 50%;
 }
 
-.request-callback .diamond-wrapper:nth-child(4) {
+.request-callback .diamond-container:nth-child(4) .diamond-wrapper {
   margin-right: 0;
 }
 
 .request-callback .diamond-descr {
-  transform: rotateZ(-45deg) translate(0px, 170px);
-  transform-origin: 0 0;
   color: #191919;
   width: 250px;
   height: 100px;
-  position: absolute;
   font-size: 18px;
   line-height: 22px;
   overflow: hidden;
+  margin-left: -20px;
+  margin-top: 75px;
 }
 
 .request-callback .diamond-wrapper:last-child {
@@ -677,14 +680,12 @@ HEADER {
 .request-callback .callback-notice {
   font-size: 14px;
   color: #191919;
-  margin: 220px 0 15px;
+  margin: 60px 0 15px;
 }
 
 .request-callback .btn {
   width: 330px;
 }
-
-
 
 .reviews {
   position: relative;
@@ -771,7 +772,7 @@ HEADER {
 .reviews .slide-contents .comment {
   width: 520px;
   height: 155px;
-  overflow: auto;
+  overflow: hidden;
   line-height: 22px;
 }
 
@@ -822,6 +823,7 @@ HEADER {
   left: 50%;
   transform: translate(-50%, -40%);
   background-size: contain;
+  text-align: center;
 }
 
 .ask-question .btn {
@@ -843,10 +845,8 @@ HEADER {
 }
 
 .ask-question .ask-question-request SPAN {
-  display: inline-block;
-  margin-left: 50%;
-  transform: translate(-50%, -6px);
-  white-space: nowrap;
+  margin-top: -6px;
+  display: block;
 }
 
 .footer-wrapper {
@@ -1129,6 +1129,11 @@ HEADER {
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px;
+    height: 82px;
+  }
   .swiper-button-prev {
     left: 4%;
   }
@@ -1137,6 +1142,9 @@ HEADER {
   }
   .btn {
     padding: 14px 20px;
+  }
+  .footer-contacts .btn {
+    width: 258px;
   }
   .input {
     font-size: 16px;
@@ -1182,7 +1190,7 @@ HEADER {
     padding-top: 76px;
   }
   .slider-section {
-    height: 585px;
+    height: 550px;
   }
   .shops-map .map-squares {
     width: 474px;
@@ -1251,14 +1259,14 @@ HEADER {
     height: 130px;
   }
   .slider-section .slide-contents .product-descr .product-size {
-    padding: 8px 14px;
+    padding: 8px 13px;
   }
   .get-catalog {
     height: 545px;
   }
   .request-callback .callback-title {
     text-transform: uppercase;
-    padding: 70px 0 10px 0;
+    padding: 60px 0 10px 0;
   }
   .get-catalog .catalog-squares {
     width: 570px;
@@ -1276,24 +1284,23 @@ HEADER {
     width: 500px;
   }
   .request-callback .callback-diamonds {
-    margin-top: 100px;
+    margin-top: 90px;
   }
   .get-catalog .catalog-squares SPAN:first-child {
     margin-top: 150px;
   }
   .get-catalog .catalog-form {
-    top: 168px;
+    top: 155px;
   }
   .request-callback .diamond-wrapper {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
   }
   .request-callback .diamond-descr {
     width: 195px;
     font-size: 14px;
-  }
-  .request-callback .diamond-descr {
-    transform: rotateZ(-45deg) translate(0px, 150px);
+    margin-left: -8px;
+    margin-top: 68px;
   }
   .request-callback {
     height: 760px;
@@ -1378,8 +1385,300 @@ HEADER {
   }
 }
 
-/*@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .swiper-button-prev {
+    left: 14px;
+  }
+  .swiper-button-next {
+    right: 14px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 45px;
+    height: 62px;
+  }
+  .btn {
+    padding: 10px 12px;
+  }
+  .input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .header-wrapper {
+    width: 96%;
+  }
+  .header-cover {
+    height: 660px;
+  }
+  .shops-map .map-squares {
+    right: 51%;
+  }
+  .header-cover .large-rect {
+    width: 410px;
+    height: 410px;
+    top: 45px;
+  }
+  .header-cover .large-rect SPAN:first-child {
+    padding-top: 37%;
+  }
+  .slider-section .slide-contents .product-descr {
+    width: 478px;
+  }
+  .header-cover .large-rect SPAN.text-large {
+    font-size: 39px;
+  }
+  .header-cover .large-rect {
+    font-size: 22px;
+  }
+  .header-cover .large-rect SPAN.text-small {
+    font-size: 23px;
+  }
+  .header-cover .small-rect {
+    width: 200px;
+    height: 200px;
+  }
+  .header-cover .rects-wrapper {
+    top: 368px;
+  }
+  .header-cover .small-rect SPAN {
+    font-size: 15px;
+  }
+  .header-cover .small-rect .text-small {
+    font-size: 12px;
+  }
+  .header-cover .small-rect .text-large {
+    font-size: 32px;
+  }
+  .header-cover .small-rect .text-x-large {
+    font-size: 50px;
+    padding-bottom: 7px;
+  }
+  .header-cover .small-rect SPAN:first-child {
+    padding-top: 66px;
+  }
+  .slider-section {
+    height: 455px;
+  }
+  .shops-map .map-squares {
+    width: 474px;
+    height: 374px;
+  }
+  .shops-map .map-squares SPAN {
+    margin-left: 100px;
+    font-size: 26px;
+  }
+  .shops-map .map-squares SPAN:first-child {
+    margin-top: 40px;
+  }
+  .shops-map .map-squares .text-large,
+  .get-catalog .catalog-squares .text-large,
+  .reviews .reviews-square .text-large {
+    font-size: 30px;
+    padding: 5px 0 10px;
+  }
+  .shops-map .map-squares .text-small,
+  .get-catalog .catalog-squares .text-small {
+    font-size: 12px;
+    width: 302px;
+    line-height: 14px;
+  }
+  .shops-map .map-ukraine {
+    width: 500px;
+    height: 346px;
+    left: 47%;
+    top: 53px;
+  }
+  .shops-map .map-ukraine .descr {
+    margin-left: 31px;
+    margin-top: -10px;
+  }
+  .shops-map .shops .shop {
+    width: 240px;
+    height: 82px;
+    margin-top: 30px;
+  }
+  .shops-map .shops {
+    height: 196px;
+  }
+  .shops-map {
+    height: 750px;
+  }
+  .slider-section .title {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .slider-section .slide-contents .product-preview .product-thumb {
+    width: 85px;
+    height: 85px;
+  }
+  .slider-section .slide-contents .product-preview .product-photo {
+    width: 278px;
+    height: 278px;
+  }
+  .slider-section .slide-contents .product-descr .product-title {
+    font-size: 30px;
+  }
+  .slider-section .slide-contents .product-descr .product-brand {
+    font-size: 16px;
+  }
+  .slider-section .slide-contents .product-descr {
+    margin-left: 26px;
+  }
+  .slider-section .slide-contents .product-descr H2 {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .slider-section .slide-contents .product-descr P {
+    line-height: 14px;
+    height: 72px;
+    font-size: 12px;
+  }
+  .slider-section .slide-contents .product-descr .product-about {
+    height: 112px;
+  }
+  .slider-section .slide-contents .product-descr .product-size {
+    padding: 6px 8px;
+  }
+  .get-catalog {
+    height: 450px;
+  }
+  .request-callback .callback-title {
+    text-transform: uppercase;
+    padding: 60px 0 10px 0;
+    font-size: 32px;
+  }
+  .request-callback .callback-subtitle {
+    font-size: 24px;
+  }
+  .get-catalog .catalog-squares {
+    width: 480px;
+    height: 416px;
+    right: 52%;
+  }
+  .get-catalog .catalog-squares SPAN {
+    font-size: 17px;
+    margin-left: 120px;
+  }
+  .get-catalog .catalog-form .row {
+    margin-bottom: 13px;
+  }
+  .shops-map .map-squares .text-large,
+  .get-catalog .catalog-squares .text-large,
+  .reviews .reviews-square .text-large {
+    font-size: 24px;
+    width: 385px;
+  }
+  .request-callback .callback-diamonds {
+    margin-top: 75px;
+  }
+  .get-catalog .catalog-squares SPAN:first-child {
+    margin-top: 108px;
+  }
+  .get-catalog .catalog-form {
+    top: 108px;
+  }
+  .request-callback .diamond-wrapper {
+    width: 130px;
+    height: 130px;
+    margin-right: 90px;
+  }
+  .request-callback .diamond-descr {
+    width: 195px;
+    font-size: 14px;
+  }
+  .request-callback {
+    height: 700px;
+  }
+  .reviews {
+    height: 568px;
+  }
+  .reviews .reviews-square {
+    width: 480px;
+    height: 484px;
+    right: 51%;
+  }
+  .reviews .reviews-square > SPAN:first-child {
+    margin-top: 200px;
+  }
+  .reviews .reviews-square > SPAN {
+    margin-left: 110px;
+  }
+  .reviews .reviews-square .reviews-pagination {
+    margin-left: 110px;
+  }
+  .reviews .rewiews-slider {
+    top: 264px;
+    width: 587px;
+  }
+  .reviews .slide-contents {
+    padding: 18px 24px;
+    width: calc(100% - 110px);
+  }
+  .reviews .slide-contents .comment {
+    width: calc(100% - 40px);
+    height: 104px;
+    line-height: 17px;
+    font-size: 14px;
+  }
+  .reviews .slide-contents .author-photo {
+    width: 120px;
+    height: 120px;
+    right: 2px;
+  }
+  .footer-contacts {
+    padding-left: 150px;
+  }
+  .footer-contacts {
+    padding-top: 50px;
+  }
+  .footer-contacts .address {
+    margin-top: 24px;
+  }
+  .footer-contacts .telephone A {
+    margin-top: 24px;
+    font-size: 28px;
+  }
+  .footer-contacts .socials {
+    margin-top: 34px;
+  }
+  .footer-wrapper {
+    height: 360px;
+  }
+  .footer-contacts .socials .title {
+    margin-bottom: 12px;
+  }
+  .reviews .rewiews-slider {
+    left: 41.7%;
+  }
+  .reviews .reviews-partners .reviews-title {
+    font-size: 26px;
+    margin-top: 34px;
+  }
+  .reviews .reviews-partners .our-partners .partner {
+    padding-right: 60px;
+  }
+  .reviews .reviews-partners {
+    height: 170px;
+  }
+  .reviews .reviews-partners .our-partners {
+    height: 86px;
+  }
+  .popup-wrapper .popup .popup-form {
+    margin-top: 48px;
+  }
+  .popup-wrapper .popup .title {
+    font-size: 36px;
+    padding-top: 24px;
+  }
+  .popup-wrapper .popup {
+    width: 610px;
+  }
+  .footer-contacts .btn {
+    margin-top: 10px;
+    width: 202px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-}*/
+}
