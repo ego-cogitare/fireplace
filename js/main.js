@@ -36,6 +36,11 @@ $(document).ready(function() {
     }, 1000);
   });
 
+  $('.product-size').on('click', function() {
+    var price = $(this).data('price');
+    $(this).closest('.product-sizes').next().find('.price').text(price);
+  });
+
   $('.c-hamburger').on('click', function() {
     $(this).toggleClass('active');
   });
