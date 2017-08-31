@@ -24,15 +24,20 @@ $(document).ready(function() {
     speed: 1000
   });
 
-  $('.menu .menu-item A').on('click', function(e) {
+  $('.menu .menu-item A, .logo').on('click', function(e) {
     e.preventDefault();
 
-    $(this).closest('.menu').find('A').removeClass('active');
+    $('.menu').find('A').removeClass('active');
     $(this).addClass('active');
+    $('.c-hamburger').removeClass('active');
     var id = $(this).attr('href');
     $('html, body').animate({
        scrollTop: $(id).offset().top - 74
     }, 1000);
+  });
+
+  $('.c-hamburger').on('click', function() {
+    $(this).toggleClass('active');
   });
 
   $('.product-thumb').on('click', function() {

@@ -11,14 +11,17 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/main.js" defer></script>
-    <!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAQd8ifFv5_cNqRZ0oFtizulSNbruyuFas&callback=initMap" async defer></script> -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAQd8ifFv5_cNqRZ0oFtizulSNbruyuFas&callback=initMap" async defer></script>
   </head>
   <body>
     <header>
       <div class="header-wrapper h100p clear">
-        <a class="logo h100p" href="#">
+        <a class="logo h100p" href="#home">
           <img width="100%" src="img/logo.png" alt="Rittershaus" />
         </a>
+        <button class="c-hamburger c-hamburger--htx ng-scope">
+          <span>toggle menu</span>
+        </button>
         <nav class="menu h100p">
           <div class="menu-item">
             <a href="#range">Ассортимент</a>
@@ -32,6 +35,11 @@
           <div class="menu-item">
             <a href="#contacts">Контакты</a>
           </div>
+
+          <span class="phone-section text-right h100p">
+            <a class="phone" href="tel:+380635023645">(063) 502-36-45</a>
+            <a class="callback popup-open" href="#">заказать звонок</a>
+          </span>
         </nav>
         <div class="phone-section text-right h100p">
           <a class="phone" href="tel:+380635023645">(063) 502-36-45</a>
@@ -40,7 +48,7 @@
       </div>
     </header>
 
-    <section>
+    <section id="home">
       <div class="header-cover">
         <div class="large-rect">
           <div class="wrapper">
