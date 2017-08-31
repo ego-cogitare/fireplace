@@ -69,5 +69,7 @@ function initMap() {
     position: coords,
     map: map
   });
-  map.panBy($(document).width() / -4, 0);
+  if ($(document).width() > 1023) {
+    map.panBy($(document).width() / -4, 0);
+  }
 }

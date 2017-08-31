@@ -1689,4 +1689,39 @@ HEADER {
 }
 
 @media only screen and (max-width: 1023px) {
+  .btn {
+    padding: 14px 18px;
+  }
+  .footer-contacts .btn {
+    margin-top: 10px;
+    width: 216px;
+  }
+  .footer-wrapper {
+    height: auto;
+  }
+  .footer-wrapper .footer-map {
+    height: 250px;
+  }
+  .footer-wrapper .footer-contacts {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    position: static;
+  }
+  .footer-contacts .address {
+    margin-top: 20px;
+  }
+  .footer-contacts .telephone A {
+    margin-top: 34px;
+    font-size: 30px;
+  }
+  .footer-contacts .socials {
+    margin-top: 42px;
+  }
+  .footer-contacts .socials .title {
+    margin-bottom: 12px;
+  }
 }
