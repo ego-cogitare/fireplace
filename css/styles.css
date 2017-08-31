@@ -171,6 +171,10 @@ HEADER {
   margin: 0 auto;
 }
 
+.header-wrapper .c-hamburger {
+  display: none;
+}
+
 .header-wrapper .logo {
   display: inline-block;
   line-height: 84px;
@@ -543,6 +547,7 @@ HEADER {
 }
 
 .slider-section .slide-contents .product-descr .product-size {
+  cursor: pointer;
   display: inline-block;
   border: 1px solid #d24a43;
   font-size: 14px;
@@ -550,6 +555,11 @@ HEADER {
   border-radius: 3px;
 }
 
+.slider-section .slide-contents .product-descr .product-size:hover,
+.slider-section .slide-contents .product-descr .product-size.active {
+  background: #db534c;
+  color: #ffffff;
+}
 
 .slider-section .slide-contents .product-descr .product-price-order {
   margin-top: 16px;

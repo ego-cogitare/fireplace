@@ -38,7 +38,15 @@ $(document).ready(function() {
 
   $('.product-size').on('click', function() {
     var price = $(this).data('price');
-    $(this).closest('.product-sizes').next().find('.price').text(price);
+
+    $(this)
+      .addClass('active')
+      .siblings()
+      .removeClass('active')
+      .closest('.product-sizes')
+        .next()
+          .find('.price')
+          .text(price);
   });
 
   $('.c-hamburger').on('click', function() {
