@@ -204,7 +204,8 @@ HEADER {
   font-size: 14px;
 }
 
-.header-wrapper .menu .menu-item A:hover {
+.header-wrapper .menu .menu-item A:hover,
+.header-wrapper .menu .menu-item A.active {
   text-decoration: underline;
 }
 
@@ -1025,16 +1026,15 @@ HEADER {
 }
 
 .popup-wrapper .popup .popup-contents .popup-close {
-  font-size: 32px;
   position: absolute;
   right: -17px;
   top: -18px;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  line-height: 27px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   user-select: none;
+  background: url('../img/popup-close.png') no-repeat center center;
+  background-size: cover;
 }
 
 .popup-wrapper .popup .popup-contents .popup-close:hover {
@@ -1689,6 +1689,17 @@ HEADER {
 }
 
 @media only screen and (max-width: 1023px) {
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 45px;
+    height: 62px;
+  }
   .btn {
     padding: 14px 18px;
   }
@@ -2018,13 +2029,14 @@ HEADER {
   }
   .shops-map .map-ukraine .descr {
     display: block;
-    width: 100%;
-    margin: 24px 0 0;
+    width: 90%;
+    margin: 24px auto 0;
     text-align: center;
   }
   .shops-map .shops .descr {
-    margin-top: 0;
+    margin: 0 auto;
     padding-top: 30px;
+    width: 90%;
   }
   .shops-map .shops .shop:before,
   .shops-map .shops .shop:last-child:after {
@@ -2052,26 +2064,27 @@ HEADER {
   .slider-section .slide-contents .product-thumbs {
     float: none;
     text-align: left;
+    margin-left: 1px;
   }
   .slider-section .slide-contents .product-thumbs .product-thumb:last-child {
     margin-right: 0;
   }
   .slider-section .slide-contents {
     display: block;
+    width: 90%;
+    margin: 0 auto;
   }
   .slider-section .slide-contents .product-preview {
     width: 100%;
+    padding-bottom: 26px;
   }
-  /*.slider-section .slide-contents {
-    float: none;
-  }*/
   .slider-section .slide-contents .product-preview .product-photo {
     float: none;
     width: 100%;
     height: 90vw;
   }
   .swiper-container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .slider-section .slide-contents .product-descr {
@@ -2082,7 +2095,28 @@ HEADER {
     text-align: center;
     font-size: 30px;
   }
-  .slider-section .slide-contents .product-descr .product-brand {
+  .slider-section .slide-contents .product-descr .product-brand,
+  .slider-section .slide-contents .product-descr H2,
+  .slider-section .slide-contents .product-descr P {
     text-align: center;
+    height: auto;
+  }
+  .slider-section .slide-contents .product-descr .product-about {
+    height: auto;
+  }
+  .slider-section .slide-contents .product-descr .product-size {
+    margin-bottom: 5px;
+  }
+  .slider-section .slide-contents .product-descr .product-sizes {
+    text-align: center;
+  }
+  .slider-section .slide-contents .product-descr .product-price {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .slider-section .slide-contents .product-descr .product-order {
+    width: 100%;
+    margin: 15px 0 30px;
   }
 }
