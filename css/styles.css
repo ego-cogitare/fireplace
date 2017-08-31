@@ -2141,7 +2141,7 @@ HEADER {
     margin: 0;
     left: 100%;
     top: 74px;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .9);
     padding-top: 16px;
     -webkit-transition: all .3s ease .0s;
     transition: all .3s ease .0s;
@@ -2224,6 +2224,9 @@ HEADER {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     background: #fff;
+  }
+  .header-wrapper .c-hamburger {
+    display: block;
   }
   .c-hamburger--htx.active + .menu {
     left: 10%;
