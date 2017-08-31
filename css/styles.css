@@ -1757,6 +1757,7 @@ HEADER {
   }
   .reviews {
     height: auto;
+    padding-bottom: 40px;
   }
   .reviews .reviews-partners {
     position: static;
@@ -1800,7 +1801,7 @@ HEADER {
   }
   .reviews .rewiews-slider {
     width: 90%;
-    height: 260px;
+    height: 215px;
     margin: 0 auto;
   }
   .reviews .slide-contents .comment {
@@ -1832,7 +1833,7 @@ HEADER {
     bottom: 20px;
     margin-left: 45%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 1;
   }
   .reviews .reviews-square > SPAN {
     width: 100%;
@@ -2058,6 +2059,7 @@ HEADER {
     width: 75%;
     height: 86px;
     margin-top: 0;
+    max-width: 300px;
   }
   .slider-section {
     height: auto;
