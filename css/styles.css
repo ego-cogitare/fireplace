@@ -2014,6 +2014,7 @@ HEADER {
     height: calc(100vh - 74px);
   }
   .header-cover .large-rect {
+    display: table;
     width: 90%;
     height: 90vw;
     top: 50%;
@@ -2023,7 +2024,8 @@ HEADER {
     width: 48vw;
     height: 48vw;
     margin-right: 0;
-    display: none;
+    display: block;
+    position: absolute;
   }
   .header-cover .rects-wrapper {
     left: 0;
@@ -2031,20 +2033,75 @@ HEADER {
     white-space: initial;
     text-align: center;
     transform: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
+  .header-cover .small-rect SPAN:first-child {
+    padding-top: 35%;
+  }
+  .header-cover .small-rect SPAN {
+    font-size: 12px;
+  }
+  .header-cover .small-rect .text-small {
+    font-size: 11px;
+    line-height: 14px;
   }
   .header-cover .large-rect SPAN {
-    width: 80%;
-    text-align: center !important;
-    font-size: 22px;
+    font-size: 20px;
   }
   .header-cover .large-rect SPAN.text-small {
-    font-size: 17px;
+    font-size: 16px;
+    text-align: center !important;
   }
   .header-cover .large-rect SPAN:first-child {
-    padding-top: 37%;
+    padding-top: 0;
+    width: auto;
+    margin-left: calc(45vw - 107px);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .header-cover .small-rect:nth-child(1) {
+    top: 2%;
+    left: 0;
+  }
+  .header-cover .small-rect:nth-child(2) {
+    top: 2%;
+    right: 0;
+  }
+  .header-cover .small-rect:nth-child(3) {
+    bottom: calc(2% + 74px);;
+    left: 0;
+  }
+  .header-cover .small-rect:nth-child(4) {
+    bottom: calc(2% + 74px);;
+    right: 0;
+  }
+  .header-cover .small-rect .text-large {
+    font-size: 24px;
+  }
+  .header-cover .small-rect .text-large {
+    padding-bottom: 0;
+  }
+  .header-cover .small-rect .text-x-large {
+    font-size: 56px;
+  }
+  .header-cover .large-rect SPAN {
+    width: 214px;
+    margin: 0 auto;
   }
   .header-cover .large-rect SPAN.text-large {
-    font-size: 35px;
+    padding-bottom: 5px;
+  }
+  .header-cover .large-rect .wrapper {
+    width: 214px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .header-cover .large-rect SPAN.text-large {
+    font-size: 32px;
   }
   .shops-map .map-squares SPAN:first-child {
     margin-top: 0;
@@ -2178,7 +2235,7 @@ HEADER {
     vertical-align: middle;
     text-align: center;
     padding: 16px 0px;
-    border-bottom: 1px solid #db534c;
+    border-bottom: 1px solid #3eb5f1;
     width: 50%;
     margin: 0 auto;
   }
