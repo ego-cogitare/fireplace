@@ -66,22 +66,68 @@ $(document).ready(function() {
     });
   });
 
-  $('#get-catalog-form').on('submit', function(e) {
+  var collectPostData = function() {
+    // Selected price
+    var $activeSize = $('.slider-section .swiper-slide-active .product-size.active');
+
+    // Collect form data
+    return {
+      price: $activeSize.data('price'),
+      size:  $activeSize.text(),
+      phone: $(this).find('INPUT[name="contactPhone"]').val(),
+      name: $(this).find('INPUT[name="yourName"]').val()
+    };
+  };
+
+  $('#request-now-form').on('submit', function(e) {
     e.preventDefault();
 
-    // Close popup
-    $(this).closest('.popup-contents').find('.popup-close').trigger('click');
+    $(this).find('INPUT').removeClass('invalid');
+
+    // Get phone number field link
+    var $phone = $(this).find('INPUT[name="contactPhone"]');
+
+    // Validate phone number field
+    if (!$phone.val().match(/^(\+380|0)?[1-9]\d{8}$/)) {
+      $phone.addClass('invalid');
+      return false;
+    }
+
+    $.post('', collectPostData.call(this), function(response) {
+      // Close popup
+      $(this).closest('.popup-contents').find('.popup-close').trigger('click');
+
+      // Open thanks popup
+      var $popupWrapper = $('.popup-2');
+      $popupWrapper.show(0, function() {
+        $(this).removeClass('invisible')
+      });
+    });
+  });
+
+  $('#get-catalog-form').on('submit', function(e) {
+    e.preventDefault();
 
     var $popupWrapper = $('.popup-2');
     $popupWrapper.show(0, function() {
       $(this).removeClass('invisible')
+    });
+
+    $.post('', collectPostData.call(this), function(response) {
+      // Open thanks popup
+      var $popupWrapper = $('.popup-2');
+      $popupWrapper.show(0, function() {
+        $(this).removeClass('invisible')
+      });
     });
   });
 
   $('.popup-close').on('click', function() {
     var $popupWrapper = $(this).closest('.popup-wrapper');
     $popupWrapper.addClass('invisible');
-    setTimeout(function() { $popupWrapper.hide(); }, 300);
+    setTimeout(function() {
+      $popupWrapper.hide();
+    }, 300);
   });
 });
 

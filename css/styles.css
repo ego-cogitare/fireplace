@@ -4,6 +4,14 @@ body {
   margin-top: 74px;
 }
 
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
  .text-left {
    text-align: left !important;
  }
@@ -24,7 +32,7 @@ body {
   text-transform: uppercase;
 }
 
-.text-red {
+.brand-color {
   color: #db534c !important;
 }
 
@@ -122,6 +130,11 @@ body {
 .error {
   color: #df0024;
   border-color: #df0024;
+}
+
+.invalid {
+  color: #cc0000;
+  border-color: #cc0000;
 }
 
 .swiper-button-prev,
@@ -1023,12 +1036,22 @@ HEADER {
   width: 47.5%;
 }
 
+.popup-wrapper .popup .popup-form .row .error {
+  padding: 6px 0 0 12px;
+  font-size: 13px;
+  visibility: hidden;
+}
+
+.popup-wrapper .popup .popup-form .row INPUT.invalid + .error {
+  visibility: visible;
+}
+
 .popup-wrapper .popup .popup-form .row:last-child  {
   width: 100%;
 }
 
 .popup-wrapper .popup .popup-form .row:last-child .btn {
-  margin-top: 32px;
+  margin-top: 14px;
 }
 
 .popup-wrapper .popup .popup-contents {
