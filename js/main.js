@@ -68,20 +68,21 @@ $(document).ready(function() {
 
   var collectPostData = function() {
     // Selected price
-    var $activeSize = $('.slider-section .swiper-slide-active .product-size.active');
+    var $activeSize = $('.slider-section .swiper-slide-active');
 
     // Collect form data
     return {
-      price: $activeSize.data('price'),
-      size:  $activeSize.text(),
-      phone: $(this).find('INPUT[name="contactPhone"]').val(),
-      name: $(this).find('INPUT[name="yourName"]').val()
+      form: 'fireplace',
+      price: $activeSize.find('.product-price .price').text(),
+      title: $activeSize.find('.product-title').text(),
+      color:  $activeSize.find('.product-brand').text(),
+      userPhone: $(this).find('INPUT[name="contactPhone"]').val(),
+      userName: $(this).find('INPUT[name="yourName"]').val()
     };
   };
 
   $('#request-now-form').on('submit', function(e) {
     e.preventDefault();
-
 
     $(this).find('INPUT').removeClass('invalid');
 
