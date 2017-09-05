@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  var _ = {
+    phonePattern: /^(\+380|0)?[1-9]\d{8}$/,
+    processForm: '/ajax/process-form.php'
+  };
+
   new Swiper('.slider-section .swiper-container', {
     direction: 'horizontal',
     slidesPerView: 1,
@@ -9,7 +14,8 @@ $(document).ready(function() {
     loop: true,
     spaceBetween: 0,
     mousewheelControl: false,
-    speed: 1000
+    speed: 1000,
+    simulateTouch:false
   });
 
   new Swiper('.rewiews-slider .swiper-container', {
@@ -60,25 +66,40 @@ $(document).ready(function() {
   });
 
   $('.popup-open').on('click', function() {
-    var $popupWrapper = $('.popup-1');
+    var $popupWrapper = $('.popup-1')
+      , role = $(this).data('role');
+
     $popupWrapper.show(0, function() {
-      $(this).removeClass('invisible')
+      $(this)
+        .removeClass('invisible')
+        .find('.popup')
+        .removeClass('default buy')
+        .addClass(role || 'default');
     });
   });
 
-  var collectPostData = function() {
+  var collectPostData = function(role) {
     // Selected price
-    var $activeSize = $('.slider-section .swiper-slide-active');
+    var $activeSize = $('.slider-section .swiper-slide-active')
 
-    // Collect form data
-    return {
-      form: 'fireplace',
-      price: $activeSize.find('.product-price .price').text(),
-      title: $activeSize.find('.product-title').text(),
-      color:  $activeSize.find('.product-brand').text(),
-      userPhone: $(this).find('INPUT[name="contactPhone"]').val(),
-      userName: $(this).find('INPUT[name="yourName"]').val()
-    };
+    // Assemble post data
+    , data = {
+        form: 'fireplace',
+        price: $activeSize.find('.product-price .price').text(),
+        title: $activeSize.find('.product-title').text(),
+        color:  $activeSize.find('.product-brand').text(),
+        userPhone: $(this).find('INPUT[name="contactPhone"]').val(),
+        userName: $(this).find('INPUT[name="yourName"]').val()
+      };
+
+    // Remove unnecessary data
+    if (role === 'default') {
+      delete data.price;
+      delete data.title;
+      delete data.color;
+    }
+
+    return data;
   };
 
   $('#request-now-form').on('submit', function(e) {
@@ -87,19 +108,23 @@ $(document).ready(function() {
     $(this).find('INPUT').removeClass('invalid');
 
     // Get phone number field link
-    var $phone = $(this).find('INPUT[name="contactPhone"]');
-    var form = this;
+    var $phone = $(this).find('INPUT[name="contactPhone"]')
+      , role = $(this).closest('.popup').hasClass('buy') ? 'buy' : 'default'
+      , form = this;
 
     // Validate phone number field
-    if (!$phone.val().match(/^(\+380|0)?[1-9]\d{8}$/)) {
+    if (!$phone.val().match(_.phonePattern)) {
       $phone.addClass('invalid');
       return false;
     }
 
-    $.post('/ajax/process-form.php', collectPostData.call(this), function(response) {
+    $.post(_.processForm, collectPostData.call(this, role), function(response) {
       if (response.success) {
         // Close popup
         $(form).closest('.popup-contents').find('.popup-close').trigger('click');
+
+        // Clear form
+        $(form).get(0).reset();
 
         // Open thanks popup
         var $popupWrapper = $('.popup-2');
@@ -113,12 +138,19 @@ $(document).ready(function() {
   $('#get-catalog-form').on('submit', function(e) {
     e.preventDefault();
 
-    var $popupWrapper = $('.popup-2');
-    $popupWrapper.show(0, function() {
-      $(this).removeClass('invisible')
-    });
+    var $phone = $(this).find('INPUT[name="contactPhone"]')
+      , form = this;
 
-    $.post('', collectPostData.call(this), function(response) {
+    // Validate phone number field
+    if (!$phone.val().match(_.phonePattern)) {
+      $phone.addClass('invalid');
+      return false;
+    }
+
+    $.post(_.processForm, collectPostData.call(this, 'default'), function(response) {
+      // Clear form
+      $(form).get(0).reset();
+
       // Open thanks popup
       var $popupWrapper = $('.popup-2');
       $popupWrapper.show(0, function() {
@@ -133,6 +165,10 @@ $(document).ready(function() {
     setTimeout(function() {
       $popupWrapper.hide();
     }, 300);
+  });
+
+  $(this).on('keyup', function(e) {
+    (e.which === 27) && $('.popup-contents').find('.popup-close').trigger('click');
   });
 });
 
