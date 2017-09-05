@@ -148,14 +148,16 @@ $(document).ready(function() {
     }
 
     $.post(_.processForm, collectPostData.call(this, 'default'), function(response) {
-      // Clear form
-      $(form).get(0).reset();
+      if (response.success) {
+        // Clear form
+        $(form).get(0).reset();
 
-      // Open thanks popup
-      var $popupWrapper = $('.popup-2');
-      $popupWrapper.show(0, function() {
-        $(this).removeClass('invisible')
-      });
+        // Open thanks popup
+        var $popupWrapper = $('.popup-2');
+        $popupWrapper.show(0, function() {
+          $(this).removeClass('invisible')
+        });
+      }
     });
   });
 
